@@ -1,0 +1,93 @@
+body{
+    background-color:whitesmoke;
+}
+p{
+  color: rgba(0,0,0,0.8);
+}
+p1{
+    color: rgba(0,0,0,0.8);
+    
+}
+h1{
+  background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 150px;
+}
+
+
+.search-container {
+      margin-top: 20px;
+}
+
+#searchInput {
+  padding: 10px;
+   width: 600px;
+   height: 30px;
+     }
+
+     #searchResults {
+  margin-top: 20px;
+    } 
+
+.slider {
+    height: 500px;
+width:100% ;
+overflow: hidden;
+margin: auto;
+position: relative;
+}
+.slides {
+display: flex;
+transition: transform 0.5s ease-in-out;
+}
+.slide {
+min-width: 100%;
+min-height: 500px;
+overflow: hidden;
+} img {
+width: 100%;
+height: 500px;
+height: auto;
+}
+
+.prev {
+left: 0;
+}
+.next {
+right: 0;
+}
+
+.navbar {
+  background-color: rgba(0,0,0,0.4); 
+  height: 90px;
+  width: 100%;/* Background color of the navbar */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  display: inline-block;
+  color:white; /* Color of the links */
+  text-align: center;
+  padding: 14px 16px; /* Padding around the links */
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  background-color: #555; /* Background color on hover */
+}
+
+/* Add space between each navbar item */
+.navbar ul li + li {
+  margin-left: 20px; /* Adjust this value to increase/decrease space */
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">

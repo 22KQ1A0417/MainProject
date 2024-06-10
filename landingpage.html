@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>landing page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+       
+    </head>
+    <style>
+      h4{
+        height: 90px;
+        width: 100%;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+      }
+      h2{
+        font-size: x-large;
+        font-display:var(action);
+        color: rgba(0,0,0,0.4) ;
+      }
+    </style>
+    <body>
+      <h4>
+       <nav class="navbar">
+        
+        <ul><br><br>
+          <li><i class="C:\Users\anuaj\Pictures\Screenshots\Screenshot 2024-06-09 230356.png"></i>
+          </li>
+          <li>Gold Sense-Feel the touch       </li>
+        <li><a href="#">Home</a></li>
+        <li><a href="registration.html">Register</a></li>
+        <li><a href="loginpage.html">Sign In</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+       </nav>
+      </h4>
+      
+      <center>
+       
+    
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="search()">Search</button>
+    </div>
+
+    <div id="searchResults">
+        <!-- Search results will be displayed here -->
+    </div>
+    <script>
+    function search() {
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("searchResults");
+      li = ul.getElementsByTagName('li');
+  
+      for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+          } else {
+              li[i].style.display = "none";
+          }
+      }
+  }
+  </script>
+      </center>
+      <br><br>
+      
+        <div class="slider">
+            <div class="slides">
+              <div class="slide">
+                <img src="slide1.jpg" alt="Slide 1">
+              </div>
+              <div class="slide">
+                <img src="slide2.jpg" alt="Slide 2">
+              </div>
+              <div class="slide">
+                <img src="slide3.jpg" alt="Slide 3">
+              </div>
+            </div>
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+          </div>
+
+          <script>
+          let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+  function moveSlide(n) {
+    showSlides(slideIndex += n);
+  }
+
+  
+  
+</script>
+<br><br>
+
+<div class="jumbotron text-center">
+    <h1><br>List of Products</h1><br>
+     <p1>We have over 5000 styles of eyewear, which is 5 times more than that any retailer in India. From big brands like RayBan and Oakley to the best in house brands.
+
+    </p1>
+ </div>
+
+<div class="container">
+     <div class="col-sm-4">
+        <h3>Spects Frames</h3>
+        <p> round frames,cat frame,rectangular frames </p>
+        <p>We have all  Frame  Models </p>
+
+      </div>
+      <div class="col-sm-4">
+          <h3>SunGlasses</h3>
+          <p>cool shades,sunshades</p>
+
+        </div>
+        <div class="col-sm-4">
+          <h3>lens</h3>
+          <p>lens with power & without power </p>
+           <p>color lens with power &without power</p>
+        </div>
+</div>
+
+    </body>
+</html>

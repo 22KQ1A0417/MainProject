@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>Registration</title>
+<style>
+    body{
+        background-size:cover;
+    }
+
+            h2{text-align:start}
+            h3{color:rgb(5, 8, 10)}
+           
+            .navbar {
+  background-color: rgba(0,0,0,0.4); 
+  height: 60px;
+  width: 100%;/* Background color of the navbar */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  display: inline-block;
+  color:white; /* Color of the links */
+  text-align: center;
+  padding: 14px 16px; /* Padding around the links */
+  text-decoration: none;
+}
+
+.navbar ul li a:hover {
+  background-color: #555; /* Background color on hover */
+}
+
+/* Add space between each navbar item */
+.navbar ul li + li {
+  margin-left: 20px; /* Adjust this value to increase/decrease space */
+}
+
+.transparent-div {
+    width: 350px; /* Adjust width as needed */
+    height: 450px; /* Adjust height as needed */
+    background-color: rgba(255, 255, 255, 0.5);
+           }
+           .background-video {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Ensure the video stays in the background */
+    overflow: hidden;
+}
+
+.background-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire container */
+}
+</style>
+   <meta charset=""utf-8">
+   <meta name="viewport"content="width-device-width,initial=scale=0">  
+<script>
+    
+    function validation(){
+
+        var uname = document.myform.username.value;
+        var MobileNo = document.myform.MobileNo.value;
+        var location = document.myform.location.value;
+        var nearby = document.myform.nearby.value;
+        var Pincode = document.myform.Pincode.value;
+        var EmailId = document.myform.EmailId.value;
+        var password = document.myform.password.value;
+        if(uname==null || uname=="") {
+            alert("Name cant be blank")
+             return false; 
+        } else if(MobileNo.length<10){
+             alert("Mobile No must be 10 digits")
+              return false;
+        }else if(location==null || location==""){
+          alert("Location cant be blank")
+           return false;
+        }  else if (Pincode.length<6){
+           alert("Pincode Must be 6 letters")
+           return false;
+        } else if(EmailId==null || EmailId==""){
+            alert("Email cant be blank")       
+            return false; 
+        } if (password.length<6){
+            alert("Password Must be 6 letters")
+              return false;
+        }  
+           return true;
+
+}
+ 
+
+      </script>
+</head>
+
+    
+<body>
+    
+  <div class="background-video">
+    <video autoplay muted loop>
+        <source src="video2.mp4" type="video/mp4">
+        </video>
+        </div>
+        
+    
+ 
+   
+    <center>
+        <br><br>
+        <div class="transparent-div">
+<form name="myform" action ="loginpage.html" onsubmit="return validation(this)">
+
+   
+
+   
+
+<h3>Registration Form</h3>
+Name         :<input type="text" name="username"placeholder="Name..." ><br> 
+Mobile Number:<input type="text"name="MobileNo"placeholder="Mobile Number.." ><br>
+Location     :<input type="text"name="location"placeholder="Location.."><br>
+Near by      :<input type="text"name="nearby"placeholder="Near by.."><br>
+Pincode      :<input type="text"name="Pincode"placeholder="Pincode.."><br>
+Select Gender:<br>
+<input type="radio"name="gender"value="m">Male<br>
+<input type="radio"name="gender"value="f">Female<br>
+Email Id   :<input type="text"name="EmailId"placeholder="Email id"><br>
+Password   :<input type="text"name="password"placeholder="Password"><br>
+<br>
+              <input name="submit" type="submit"value="submit">
+               
+
+
+
+</div>
+</center>
+   
+</form>
+</body>
+</html>

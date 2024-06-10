@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>login page</title>
+        <meta charset=""utf-8">
+        <meta name="viewport"content="width-device-width,initial=scale=0">  
+        <style>
+           .transparent-div {
+    width: 350px; /* Adjust width as needed */
+    height: 250px; /* Adjust height as needed */
+    background-color: rgba(255, 255, 255, 0.5);
+           }
+           .background-video {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Ensure the video stays in the background */
+    overflow: hidden;
+}
+
+.background-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire container */
+}
+
+        </style>
+        <script>
+
+         // User Validations
+     function loginValidation() {
+             
+     var uname = document.myform.username.value;
+              
+     var password = document.myform.password.value;
+             if(uname==null || uname=="") {
+               alert("Name cant be blank")
+               return false;  
+            } else if (password.length<6){
+               alert("Password Must be 6 letters")
+               return false;
+            }  
+            return true                 
+         }           
+      </script>
+    </head>
+    
+
+   </body>
+   <body>
+      <div class="background-video">
+         <video autoplay muted loop>
+             <source src="video2.mp4" type="video/mp4">
+             </video>
+             </div>
+       <br><br><br>
+       <br>
+       <center>
+        <div class="transparent-div">
+          <br><br>
+     <form name="myform" action="landingpage.html" onsubmit="return loginValidation(this)">
+     <h3>Login Page</h3>
+     <label for="Username"></label>
+      <input type="text" name="username"placeholder="Username....."><br>
+     <br>
+     <label for="Password"></label>
+      <input type="text" name="password"placeholder="Password....."><br>
+     <br>
+     <input type="submit"name="submit"value="submit">
+                 <br>
+                
+                </formaction>
+               </div>
+                </center>
+     </form>
+    </body>
+   </html>
